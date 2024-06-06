@@ -2,6 +2,7 @@ import socket
 import threading
 
 # Lista de clientes conectados y un bloqueo para sincronizar el acceso a la lista.
+#Threading.Lock() bloquea en este caso el puerto de conexion para que no sea usado por otro cliente.
 clientes = []
 clientes_lock = threading.Lock()
 
